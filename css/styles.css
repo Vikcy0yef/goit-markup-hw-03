@@ -6,10 +6,44 @@
 ul,
 ol {
   list-style-type: none;
+  padding-left: 0;
+  margin: 0;
 }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
 a {
   text-decoration: none;
 }
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip: rect(0, 0, 0, 0);
+  clip-path: inset(50%);
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.container {
+  width: 1158px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: auto;
+}
+
 .logo {
   font-family: "Raleway", sans-serif;
   font-weight: 700;
@@ -21,6 +55,47 @@ a {
 }
 .header-logo-link .header-logo {
   color: #2e2f42;
+  margin-right: 76px;
+}
+
+.header-logo {
+  margin-right: 100px;
+}
+
+.header {
+  border-bottom: 1px solid #e7e9fc;
+  width: 1158px;
+  height: 72px;
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+}
+
+.header-navigation {
+  display: flex;
+  align-items: center;
+}
+
+.header-nav-list {
+  display: flex;
+  gap: 40px;
+}
+
+.header-address-item {
+  margin-left: auto;
+}
+
+.header-address {
+  margin-left: auto;
+}
+.header-address-list {
+  display: flex;
+  gap: 40px;
+}
+.header-nav-item {
+  padding: 24px 0;
 }
 
 .header-nav-link {
@@ -47,7 +122,18 @@ a {
 }
 .main-page {
   background-color: #2e2f42;
+  padding: 188px 0;
 }
+
+.page-container {
+  display: flex;
+  flex-direction: column; /* Вирівнюємо елементи вертикально */
+  justify-content: center; /* Вирівнюємо по вертикалі */
+  align-items: center; /* Вирівнюємо по горизонталі */
+  text-align: center; /* Текст заголовка по центру */
+  height: 100%;
+}
+
 .main-page-title {
   font-weight: 700;
   font-size: 56px;
@@ -55,19 +141,40 @@ a {
   letter-spacing: 0.02em;
   text-align: center;
   color: #fff;
+  max-width: 496px;
+  margin-bottom: 48px;
 }
+
 .main-page-button {
   font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.04em;
   color: #fff;
+  cursor: pointer;
+  display: block;
+  min-width: 169px;
+  height: 56px;
+  border: none;
   background-color: #4d5ae5;
+  border-radius: 4px;
   cursor: pointer;
 }
 .main-page-button:hover,
 .main-page-button:focus {
   background-color: #404bbf;
+}
+
+.main-actions {
+  padding: 120px 0;
+}
+.main-actions-list {
+  display: flex;
+  gap: 24px;
+}
+
+.main-actions-item {
+  width: calc((100% - 72px) / 4);
 }
 
 .main-actions-item-title {
@@ -76,6 +183,7 @@ a {
   line-height: 1.2;
   letter-spacing: 0.02em;
   color: #2e2f42;
+  margin-bottom: 8px;
 }
 .main-actions-item-description {
   font-size: 16px;
@@ -85,6 +193,7 @@ a {
 }
 .team {
   background-color: #f4f4fd;
+  padding: 120px 0;
 }
 .team-title {
   font-weight: 700;
@@ -94,9 +203,19 @@ a {
   text-align: center;
   color: #2e2f42;
   text-transform: capitalize;
+  margin-bottom: 72px;
 }
+
+.team-list {
+  display: flex;
+  gap: 24px;
+}
+
 .team-item {
   background-color: #ffffff;
+  width: calc((100% - 72) / 4);
+  border-radius: 0 0 4px 4px;
+  height: 380px;
 }
 .team-name {
   font-weight: 500;
@@ -105,6 +224,7 @@ a {
   letter-spacing: 0.02em;
   text-align: center;
   color: #2e2f42;
+  margin-bottom: 8px;
 }
 .team-position {
   font-size: 16px;
@@ -112,7 +232,26 @@ a {
   letter-spacing: 0.02em;
   text-align: center;
   color: #434455;
+  text-align: center;
 }
+
+.portfolio-list {
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 48px;
+  column-gap: 24px;
+}
+
+.portfolio-item {
+  width: calc((100% - 48) / 3);
+}
+
+.portfolio-container {
+  padding: 32px 16px;
+  border: 1px solid #e7e9fc;
+  border-top: none;
+}
+
 .portfolio-title {
   font-weight: 700;
   font-size: 36px;
@@ -128,6 +267,7 @@ a {
   line-height: 1.2;
   letter-spacing: 0.02em;
   color: #2e2f42;
+  margin-bottom: 8px;
 }
 .portfolio-item-category {
   font-size: 16px;
@@ -137,13 +277,21 @@ a {
 }
 .footer {
   background-color: #2e2f42;
+  padding: 100px 0;
 }
+
+.footer-container {
+}
+
 .footer-logo-link .footer-logo {
   color: #f4f4fd;
+  display: inline-block;
+  margin-bottom: 16px;
 }
 .footer-description {
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: #f4f4fd;
+  max-width: 264px;
 }
