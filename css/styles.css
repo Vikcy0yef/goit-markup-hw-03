@@ -56,7 +56,7 @@ a {
   text-transform: uppercase;
   color: #4d5ae5;
   margin-right: 76px;
-  padding: 24px 0;
+  padding: 24px 0 24px;
   display: inline-block;
 }
 .header-logo-link .header-logo {
@@ -318,4 +318,5 @@ a {
   color: #4d5ae5;
   display: inline-block;
   padding-bottom: 16px;
+  margin-bottom: 16px;
 }
